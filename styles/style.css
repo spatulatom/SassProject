@@ -22,6 +22,10 @@ body {
   -o-background-size: cover;
 }
 
+/* The translateZ() CSS function repositions an element along the z-axis in 3D space, i.e., closer to or farther away from the viewer. 
+Its result is a <transform-function> data type.
+see more: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateZ() */
+
 #landscape,
 #monkeys {
   width: 100%;
