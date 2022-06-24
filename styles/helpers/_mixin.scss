@@ -1,3 +1,6 @@
+// In Sass, a mixin lets you make groups of 
+// CSS declarations that you want to reuse throughout your site.
+
 @mixin background-size($size){
     background-size: $size;
       -webkit-background-size:  $size;
@@ -9,6 +12,10 @@
     @include background-size(cover);
   }
 
+  // Mixins also have the ability to take in a value.
+  // An argument, or parameter, is a value passed to the 
+  // mixin that will be used inside 
+  // the mixin, such as $color in this example:
   @mixin highlight-header($color){
     &:hover{color: $color;}
   }

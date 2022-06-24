@@ -1,3 +1,13 @@
+// By default, @import looks for a Sass file in the same or 
+// otherwise specified directory but there are a few circumstances 
+// where it will behave just like a CSS @import rule:
+
+// If the file’s extension is .css.
+// If the filename begins with http://.
+// If the filename is a url().
+// If the @import has any media queries.
+
+
 @import "helpers/mixin";
 @import "helpers/variables";
 
@@ -52,6 +62,7 @@ p {
 	
 	
 }
+$list: (orange, purple, teal, blue,yellow);
 $list: (orange, purple, teal, blue,yellow);
 @each $item in $list{
 	$i: index($list,($item));
