@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   margin: 0;
@@ -6,57 +11,43 @@ body {
   color: #2e3738;
 }
 
-#landscape {
-  background: url("https://content.codecademy.com/projects/sass/landscape.jpg") no-repeat center center fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-}
-
-#monkeys {
-  background: url("https://content.codecademy.com/projects/sass/monkeys.jpg") no-repeat center center fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-}
-
-/* The translateZ() CSS function repositions an element along the z-axis in 3D space, i.e., closer to or farther away from the viewer. 
-Its result is a <transform-function> data type.
-see more: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateZ() */
-
-#landscape,
-#monkeys {
+.parallax {
   width: 100%;
   height: 100vh;
-  -webkit-perspective: 1px;
-          perspective: 1px;
-  -webkit-transform: translateZ(-1px);
-          transform: translateZ(-1px);
+  -webkit-perspective: 2px;
+          perspective: 2px;
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-perspective-origin: 100%;
+          perspective-origin: 100%;
 }
 
-#landscape h1,
-#monkeys h1 {
-  text-transform: uppercase;
-  font-family: 'Bitter', serif;
-  letter-spacing: 0.06em;
-  font-size: 120px;
-  color: #FFF;
-  opacity: 0.7;
-  text-align: center;
-  -webkit-transform: translateZ(-2px);
-          transform: translateZ(-2px);
+.parallax .parallax__section {
+  position: relative;
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
 }
 
-#landscape h1:hover,
-#monkeys h1:hover {
-  color: red;
+.parallax .parallax__section .parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
-p, ul {
+.parallax .parallax__section .parallax__layer.parallax__layer--heading {
+  /* transform: translateZ(0) scale(-1); */
+}
+
+.parallax .parallax__section .parallax__layer.parallax__layer--background {
+  width: 100vw;
+}
+
+.parallax .parallax__section .parallax__layer.parallax__layer--content p, .parallax .parallax__section .parallax__layer.parallax__layer--content ul {
   width: 70%;
   padding: 5%;
   margin: 0px auto;
@@ -66,47 +57,123 @@ p, ul {
   line-height: 1.4;
 }
 
+.parallax .parallax__section .parallax__layer .title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-family: 'Bitter', serif;
+  letter-spacing: 0.06em;
+  font-size: 60px;
+  color: #FFF;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.parallax .parallax__section#section1 {
+  z-index: 2;
+}
+
+.parallax .parallax__section#section1 .parallax__layer--background {
+  background: url("https://content.codecademy.com/projects/sass/landscape.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-transform: translateZ(-1px) scale(2);
+          transform: translateZ(-1px) scale(2);
+}
+
+.parallax .parallax__section#section1 .parallax__layer--heading {
+  -webkit-transform: translateZ(0.5px) scale(0.75);
+          transform: translateZ(0.5px) scale(0.75);
+}
+
+.parallax .parallax__section#section2 {
+  z-index: 4;
+}
+
+.parallax .parallax__section#section2 .parallax__layer--background {
+  background-color: #fff;
+}
+
+.parallax .parallax__section#section3 {
+  z-index: 3;
+}
+
+.parallax .parallax__section#section3 .parallax__layer--background {
+  background: url("https://content.codecademy.com/projects/sass/monkeys.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-transform: translateZ(0) scale(1);
+          transform: translateZ(0) scale(1);
+}
+
+.parallax .parallax__section#section3 .parallax__layer--heading {
+  -webkit-transform: translateZ(0.5px) scale(0.75);
+          transform: translateZ(0.5px) scale(0.75);
+}
+
+p, ul {
+  width: 70%;
+  padding: 5%;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 1.4;
+}
+
 p:hover, ul:hover {
   color: purple;
 }
 
 ul li:nth-child(1) {
+  font-size: 2rem;
   color: orange;
 }
 
 ul li:nth-child(1):hover {
-  color: #5c1d31;
+  color: #568f68;
 }
 
 ul li:nth-child(2) {
+  font-size: 2rem;
   color: purple;
 }
 
 ul li:nth-child(2):hover {
-  color: #5c1d31;
+  color: #568f68;
 }
 
 ul li:nth-child(3) {
+  font-size: 2rem;
   color: teal;
 }
 
 ul li:nth-child(3):hover {
-  color: #5c1d31;
+  color: #568f68;
 }
 
 ul li:nth-child(4) {
+  font-size: 2rem;
   color: blue;
 }
 
 ul li:nth-child(4):hover {
-  color: #5c1d31;
+  color: #568f68;
 }
 
 ul li:nth-child(5) {
+  font-size: 2rem;
   color: yellow;
 }
 
 ul li:nth-child(5):hover {
-  color: #5c1d31;
+  color: #568f68;
 }
 /*# sourceMappingURL=style.css.map */
