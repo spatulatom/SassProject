@@ -26,6 +26,25 @@
 	font-family: Roboto;
 	color: #2e3738;
 }
+
+.navigation{
+	display: flex;
+	.item{
+		text-align: center;
+		width: 33.33%;
+		background-color: #2e3738;
+		margin-right: 2px;
+		color: white;
+		padding: .5rem;
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		&:hover{
+			background-color: azure;
+			color: black;
+		}
+	}
+ 
+}
   .parallax {
 	width: 100%;
 	height: $parallax-height;
@@ -70,17 +89,23 @@
 		  text-transform: uppercase;
 		  font-family: 'Bitter', serif;
 		  letter-spacing: 0.06em;
-		  font-size: 60px;
+		  font-size: 5rem;
 		  color: #FFF;
 		  opacity: 0.7;
 		  text-align: center;
+		  background-color: #111112;
+		  padding: 1rem;
+		//   to add hover but it dosent work
+		&:hover{
+			color: red
 		}
+		} 
 	  }
 	  &#section1 {
 		z-index: 2;
 		.parallax__layer--background {
 
-		  @include parallax-background("https://content.codecademy.com/projects/sass/landscape.jpg");
+		  @include parallax-background("../imgs/japan1.jpg");
 		  transform: translateZ(-1px) scale(2);
 		}
 		.parallax__layer--heading {
@@ -96,7 +121,7 @@
 	  &#section3 {
 		z-index: 3;
 		.parallax__layer--background {
-		  @include parallax-background("https://content.codecademy.com/projects/sass/monkeys.jpg");
+		  @include parallax-background("../imgs/japan1.jpg");
 		  transform: translateZ(0) scale(1);
 		}
 		.parallax__layer--heading {
@@ -117,7 +142,7 @@ p {
 	@include highlight-header (purple);
 	}
 	
-$list: (orange, purple, teal, blue,yellow);
+$list: (orange, purple, teal, blue,rgb(255, 0, 136));
 @each $item in $list{
 	// index here is a sass function of course that will here
 	// return a number
@@ -130,4 +155,10 @@ $list: (orange, purple, teal, blue,yellow);
 	}
 
 }
- ul {@extend p;}
+
+// extend inherits all the styles from p, 
+// if we wnat to overwrite them we can go now
+// width: 80% an so on
+ ul {
+	@extend p;
+}

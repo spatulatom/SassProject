@@ -11,26 +11,38 @@ body {
   color: #2e3738;
 }
 
+.navigation {
+  display: flex;
+}
+.navigation .item {
+  text-align: center;
+  width: 33.33%;
+  background-color: #2e3738;
+  margin-right: 2px;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.navigation .item:hover {
+  background-color: azure;
+  color: black;
+}
+
 .parallax {
   width: 100%;
   height: 100vh;
-  -webkit-perspective: 2px;
-          perspective: 2px;
+  perspective: 2px;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-perspective-origin: 100%;
-          perspective-origin: 100%;
+  perspective-origin: 100%;
 }
-
 .parallax .parallax__section {
   position: relative;
   height: 100vh;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
+  transform-style: preserve-3d;
+  transform-origin: 100%;
 }
-
 .parallax .parallax__section .parallax__layer {
   position: absolute;
   top: 0;
@@ -38,15 +50,12 @@ body {
   bottom: 0;
   right: 0;
 }
-
 .parallax .parallax__section .parallax__layer.parallax__layer--heading {
   /* transform: translateZ(0) scale(-1); */
 }
-
 .parallax .parallax__section .parallax__layer.parallax__layer--background {
   width: 100vw;
 }
-
 .parallax .parallax__section .parallax__layer.parallax__layer--content p, .parallax .parallax__section .parallax__layer.parallax__layer--content ul {
   width: 70%;
   padding: 5%;
@@ -56,66 +65,57 @@ body {
   font-weight: 200;
   line-height: 1.4;
 }
-
 .parallax .parallax__section .parallax__layer .title {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-transform: uppercase;
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
   letter-spacing: 0.06em;
-  font-size: 60px;
+  font-size: 5rem;
   color: #FFF;
   opacity: 0.7;
   text-align: center;
+  background-color: #111112;
+  padding: 1rem;
 }
-
+.parallax .parallax__section .parallax__layer .title:hover {
+  color: red;
+}
 .parallax .parallax__section#section1 {
   z-index: 2;
 }
-
 .parallax .parallax__section#section1 .parallax__layer--background {
-  background: url("https://content.codecademy.com/projects/sass/landscape.jpg") no-repeat center center fixed;
+  background: url("../imgs/japan1.jpg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  -webkit-transform: translateZ(-1px) scale(2);
-          transform: translateZ(-1px) scale(2);
+  transform: translateZ(-1px) scale(2);
 }
-
 .parallax .parallax__section#section1 .parallax__layer--heading {
-  -webkit-transform: translateZ(0.5px) scale(0.75);
-          transform: translateZ(0.5px) scale(0.75);
+  transform: translateZ(0.5px) scale(0.75);
 }
-
 .parallax .parallax__section#section2 {
   z-index: 4;
 }
-
 .parallax .parallax__section#section2 .parallax__layer--background {
   background-color: #fff;
 }
-
 .parallax .parallax__section#section3 {
   z-index: 3;
 }
-
 .parallax .parallax__section#section3 .parallax__layer--background {
-  background: url("https://content.codecademy.com/projects/sass/monkeys.jpg") no-repeat center center fixed;
+  background: url("../imgs/japan1.jpg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  -webkit-transform: translateZ(0) scale(1);
-          transform: translateZ(0) scale(1);
+  transform: translateZ(0) scale(1);
 }
-
 .parallax .parallax__section#section3 .parallax__layer--heading {
-  -webkit-transform: translateZ(0.5px) scale(0.75);
-          transform: translateZ(0.5px) scale(0.75);
+  transform: translateZ(0.5px) scale(0.75);
 }
 
 p, ul {
@@ -127,7 +127,6 @@ p, ul {
   font-weight: 200;
   line-height: 1.4;
 }
-
 p:hover, ul:hover {
   color: purple;
 }
@@ -136,44 +135,38 @@ ul li:nth-child(1) {
   font-size: 2rem;
   color: orange;
 }
-
 ul li:nth-child(1):hover {
-  color: #568f68;
+  color: rgb(86, 143, 104);
 }
 
 ul li:nth-child(2) {
   font-size: 2rem;
   color: purple;
 }
-
 ul li:nth-child(2):hover {
-  color: #568f68;
+  color: rgb(86, 143, 104);
 }
 
 ul li:nth-child(3) {
   font-size: 2rem;
   color: teal;
 }
-
 ul li:nth-child(3):hover {
-  color: #568f68;
+  color: rgb(86, 143, 104);
 }
 
 ul li:nth-child(4) {
   font-size: 2rem;
   color: blue;
 }
-
 ul li:nth-child(4):hover {
-  color: #568f68;
+  color: rgb(86, 143, 104);
 }
 
 ul li:nth-child(5) {
   font-size: 2rem;
-  color: yellow;
+  color: rgb(255, 0, 136);
 }
-
 ul li:nth-child(5):hover {
-  color: #568f68;
-}
-/*# sourceMappingURL=style.css.map */
+  color: rgb(86, 143, 104);
+}/*# sourceMappingURL=style.css.map */
