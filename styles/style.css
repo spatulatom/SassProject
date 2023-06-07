@@ -56,7 +56,8 @@ body {
 .parallax .parallax__section .parallax__layer.parallax__layer--background {
   width: 100vw;
 }
-.parallax .parallax__section .parallax__layer.parallax__layer--content p, .parallax .parallax__section .parallax__layer.parallax__layer--content ul {
+.parallax .parallax__section .parallax__layer.parallax__layer--content p,
+.parallax .parallax__section .parallax__layer.parallax__layer--content ul {
   width: 70%;
   padding: 5%;
   margin: 0px auto;
@@ -71,10 +72,10 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   text-transform: uppercase;
-  font-family: "Bitter", serif;
+  font-family: 'Bitter', serif;
   letter-spacing: 0.06em;
   font-size: 5rem;
-  color: #FFF;
+  color: #fff;
   opacity: 0.7;
   text-align: center;
   background-color: #111112;
@@ -87,7 +88,7 @@ body {
   z-index: 2;
 }
 .parallax .parallax__section#section1 .parallax__layer--background {
-  background: url("../imgs/japan1.jpg") no-repeat center center fixed;
+  background: url('../imgs/japan1.jpg') no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -107,7 +108,7 @@ body {
   z-index: 3;
 }
 .parallax .parallax__section#section3 .parallax__layer--background {
-  background: url("../imgs/japan1.jpg") no-repeat center center fixed;
+  background: url('../imgs/japan1.jpg') no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -118,7 +119,8 @@ body {
   transform: translateZ(0.5px) scale(0.75);
 }
 
-p, ul {
+p,
+ul {
   width: 70%;
   padding: 5%;
   margin: 0px auto;
@@ -127,7 +129,8 @@ p, ul {
   font-weight: 200;
   line-height: 1.4;
 }
-p:hover, ul:hover {
+p:hover,
+ul:hover {
   color: purple;
 }
 
@@ -169,4 +172,4 @@ ul li:nth-child(5) {
 }
 ul li:nth-child(5):hover {
   color: rgb(86, 143, 104);
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

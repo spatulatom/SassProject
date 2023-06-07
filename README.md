@@ -1,14 +1,8 @@
-
 <a name="readme-top"></a>
-
-
-
-
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-
 
   <p>
     Visit Japan is a SASS project- this repository contains its source code 
@@ -20,8 +14,6 @@
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -32,37 +24,32 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 This project is only a touch on Sass and an attempt to familiarize with its concepts. Variables, lists, nestings, mixins (include@), selectors, extend@, simple functions like @each and index(), organizing our scss files structure with partials imported into the main scss file - all that is being used to create a parallax effect on a demo tourist website.
 
 ![Product Name Screen Shot](imgs/japan.png)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ### Built With
 
-* HTML
-* CSS
-* SASS
-* GitHub pages for deployment and remote repository
-* Visual Studio Code as a local IDE & repository.
+- HTML
+- CSS
+- SASS
+- GitHub pages for deployment and remote repository
+- Visual Studio Code as a local IDE & repository.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
-* https://sass-lang.com/
+- https://sass-lang.com/
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
@@ -84,4 +71,4 @@ This project is only a touch on Sass and an attempt to familiarize with its conc
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[JQuery-url]: https://jquery.com
